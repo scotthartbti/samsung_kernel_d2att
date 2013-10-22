@@ -32,8 +32,6 @@
 
 #include "acpuclock.h"
 
-bool init_not_done = true;
-
 struct cpufreq_work_struct {
 	struct work_struct work;
 	struct cpufreq_policy *policy;
@@ -81,11 +79,6 @@ static int set_cpu_freq(struct cpufreq_policy *policy, unsigned int new_freq)
 			new_freq = limit->allowed_min;
 			pr_debug("min: limiting freq to %d\n", new_freq);
 		}
-	}
-
-	if (new_freq > 1512000 && init_not_done) {
-	  pr_info("[imoseyon] set_cpu_freq: wants %d but denied.\n", new_freq);
-	  new_freq = 1512000;
 	}
 
 	freqs.old = policy->cur;
