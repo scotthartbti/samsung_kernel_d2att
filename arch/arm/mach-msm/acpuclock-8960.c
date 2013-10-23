@@ -83,6 +83,7 @@ static struct msm_bus_paths bw_level_tbl[] __initdata = {
 	[4] = BW_MBPS(3200), /* At least 400 MHz on bus. */
 	[5] = BW_MBPS(3600), /* At least 450 MHz on bus. */
 	[6] = BW_MBPS(3936), /* At least 492 MHz on bus. */
+	[7] = BW_MBPS(4264), /* At least 533 MHz on bus. */
 };
 
 static struct msm_bus_scale_pdata bus_scale_data __initdata = {
@@ -155,6 +156,7 @@ static struct acpu_level acpu_freq_tbl_slow[] __initdata = {
 	{ 1, {  1620000, HFPLL, 1, 0x3C }, L2(18), 1250000 },
 	{ 1, {  1728000, HFPLL, 1, 0x40 }, L2(18), 1275000 },
 	{ 1, {  1836000, HFPLL, 1, 0x44 }, L2(18), 1325000 },
+	{ 1, {  1890000, HFPLL, 1, 0x46 }, L2(19), 1350000 },
 	{ 0, { 0 } }
 };
 
@@ -196,6 +198,7 @@ static struct acpu_level acpu_freq_tbl_nom[] __initdata = {
 	{ 1, {  1620000, HFPLL, 1, 0x3C }, L2(18), 1250000 },
 	{ 1, {  1728000, HFPLL, 1, 0x40 }, L2(18), 1275000 },
 	{ 1, {  1836000, HFPLL, 1, 0x44 }, L2(18), 1325000 },
+	{ 1, {  1890000, HFPLL, 1, 0x46 }, L2(18), 1350000 },
 	{ 0, { 0 } }
 };
 
@@ -225,6 +228,7 @@ static struct acpu_level acpu_freq_tbl_fast[] __initdata = {
 	{ 1, {  1620000, HFPLL, 1, 0x3C }, L2(18), 1250000 },
 	{ 1, {  1728000, HFPLL, 1, 0x40 }, L2(18), 1275000 },
 	{ 1, {  1836000, HFPLL, 1, 0x44 }, L2(18), 1325000 },
+	{ 1, {  1890000, HFPLL, 1, 0x46 }, L2(18), 1325000 },
 	{ 0, { 0 } }
 };
 
